@@ -7,12 +7,16 @@ export default function Guarantee() {
         <div className="rounded-2xl border-2 border-green/30 bg-green/5 p-8 md:p-10 text-center">
           <ShieldCheck className="mx-auto text-green" size={40} />
           <h3 className="mt-4 font-heading font-extrabold text-navy text-2xl">
-            The Pass-With-Confidence Guarantee
+            The 30-Day Money-Back Guarantee
           </h3>
           <p className="mt-4 text-slate-700 text-[17px] leading-relaxed max-w-xl mx-auto">
-            Study the guides for 30 days. If you don&apos;t feel completely prepared for your
-            CDL exams — or you&apos;re unhappy for any reason — email us and we&apos;ll refund
-            every penny. No forms, no hassle, you keep the downloads.
+            Try the guides for 30 days. If you&apos;re unhappy with your purchase for any
+            reason, email us and we&apos;ll refund every penny — no forms, no hassle, you keep
+            the downloads.
+          </p>
+          <p className="mt-3 text-slate-500 text-sm max-w-xl mx-auto">
+            This is a satisfaction guarantee on the study materials, not a guarantee that you
+            will pass your CDL exams — results depend on your own study and testing performance.
           </p>
         </div>
       </div>

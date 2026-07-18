@@ -19,7 +19,7 @@ export default function SocialProof() {
             added the scripts and cheat sheets I wish someone had handed me, and put it
             together into one system. This is that system.&rdquo;
           </p>
-          <p className="mt-6 font-heading font-bold text-white">— Tito, Founder</p>
+          <p className="mt-6 font-heading font-bold text-white">— Founder</p>
         </div>
 
         {/*

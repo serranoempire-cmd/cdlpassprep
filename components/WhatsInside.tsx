@@ -85,9 +85,13 @@ export default function WhatsInside() {
         <div className="relative mt-16 overflow-hidden rounded-2xl bg-navy p-8 md:p-12">
           <div className="road-texture absolute inset-0" />
           <div className="relative flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/3 aspect-video rounded-lg bg-navy-deep border border-amber/20 flex items-center justify-center">
-              {/* TODO: replace asset — quiz-game screenshot */}
-              <span className="text-slate-300 text-sm">Quiz game screenshot</span>
+            <div className="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden border border-amber/20 relative">
+              <Image
+                src="/quiz-game-screenshot.jpg"
+                alt="CDLPassPrep offline practice quiz game"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="flex-1 text-center md:text-left">
               <p className="font-heading font-extrabold text-amber uppercase tracking-wide text-sm">Plus</p>

@@ -1,20 +1,19 @@
+import Image from "next/image";
 import CTAButton from "./CTAButton";
-import GuideCover from "./GuideCover";
-
-const FAN_COVERS = [
-  { number: 1, title: "General Knowledge" },
-  { number: 3, title: "Air Brakes" },
-  { number: 6, title: "Hazmat" },
-  { number: 2, title: "Pre-Trip Inspection" },
-  { number: 5, title: "Road & Driving Test" },
-];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy">
-      <div className="road-texture absolute inset-0" />
-      <div className="relative mx-auto max-w-6xl px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div className="animate-fadeUp">
+    <section className="relative overflow-hidden bg-navy min-h-[820px] md:min-h-[760px] flex items-center">
+      <Image
+        src="/hero-bg.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-right-bottom"
+      />
+      <div className="absolute inset-0 bg-navy/70 md:bg-gradient-to-r md:from-navy md:via-navy/60 md:to-transparent" />
+      <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-16 w-full">
+        <div className="animate-fadeUp max-w-xl">
           <span className="kicker">The Complete CDL Study System</span>
           <h1 className="mt-4 font-heading font-black text-white leading-[1.05] text-[44px] md:text-[56px]">
             Pass Your CDL Test. Land the Job. Drive With Confidence.
@@ -38,24 +37,6 @@ export default function Hero() {
               <span className="text-green">✓</span> 30-day money-back guarantee
             </li>
           </ul>
-        </div>
-
-        <div className="relative h-[380px] md:h-[440px]">
-          {FAN_COVERS.map((cover, i) => {
-            const offset = i - (FAN_COVERS.length - 1) / 2;
-            return (
-              <div
-                key={cover.number}
-                className="absolute w-[160px] md:w-[190px] left-1/2 top-1/2 transition-transform duration-300 hover:-translate-y-2"
-                style={{
-                  transform: `translate(-50%, -50%) translateX(${offset * 55}px) rotate(${offset * 7}deg)`,
-                  zIndex: 10 - Math.abs(offset),
-                }}
-              >
-                <GuideCover number={cover.number} title={cover.title} priority={offset === 0} />
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

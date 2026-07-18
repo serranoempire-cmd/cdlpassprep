@@ -50,13 +50,13 @@ export default function WhatsInside() {
           </h2>
         </div>
 
-        <div className="relative mt-10 w-full aspect-[3000/1600] rounded-2xl overflow-hidden shadow-card">
+        <div className="relative mt-10 w-full aspect-[3/2] rounded-2xl overflow-hidden shadow-card">
           <Image
             src="/bundle-showcase.jpg"
             alt="All 17 CDLPassPrep study guide covers fanned out: General Knowledge, Pre-Trip Inspection, Air Brakes, Combination Vehicles, Road & Driving Test, Hazmat, Tanker & Doubles/Triples, Passenger & School Bus, Trucking Resumes, Who's Hiring New Drivers, First Week Survival, Test-Day Confidence, Trucking Terms & Glossary, State-by-State Differences, Why People Fail & How You Won't, English for the Road, and Printable Checklists"
             fill
             sizes="(max-width: 768px) 100vw, 1152px"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 

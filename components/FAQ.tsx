@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What if I fail anyway?",
-    a: "Guide 15 (Common Test Failures) exists specifically to help you prep for a retake — it breaks down exactly why people fail and how to fix it before you go back.",
+    a: "You're covered by the 30-day guarantee. Guide 15 (Common Test Failures) also exists specifically to help you prep for a retake.",
   },
   {
     q: "One payment or subscription?",

@@ -6,26 +6,30 @@ export async function POST() {
     const stripe = getStripe();
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
+    // If STRIPE_PRICE_ID is set (a fixed Price created in the Stripe dashboard), use it —
+    // this is what lets the owner A/B or change price via env vars alone. Otherwise fall
+    // back to building the line item inline from PRICE_USD_CENTS.
+    const lineItems = process.env.STRIPE_PRICE_ID
+      ? [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }]
+      : [
+          {
+            price_data: {
+              currency: "usd",
+              product_data: {
+                name: PRODUCT_NAME,
+                description:
+                  "17 premium CDL study guides (PDF) + offline practice quiz game + bonuses. Instant download.",
+              },
+              unit_amount: PRICE_USD_CENTS,
+            },
+            quantity: 1,
+          },
+        ];
+
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
-      line_items: [
-        {
-          price_data: {
-            currency: "usd",
-            product_data: {
-              name: PRODUCT_NAME,
-              description:
-                "17 premium CDL study guides (PDF) + offline practice quiz game + bonuses. Instant download.",
-            },
-            unit_amount: PRICE_USD_CENTS,
-          },
-          quantity: 1,
-        },
-      ],
-      // Alternative: if you've created a fixed Price in the Stripe dashboard,
-      // set STRIPE_PRICE_ID and swap line_items above for:
-      // line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
+      line_items: lineItems,
       success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/`,
       allow_promotion_codes: true,

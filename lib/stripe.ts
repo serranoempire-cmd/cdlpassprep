@@ -1,4 +1,5 @@
 import Stripe from "stripe";
+import { PRICE_DISPLAY } from "./pricing";
 
 // Throws only when a checkout is actually attempted without STRIPE_SECRET_KEY set —
 // it's safe to build/deploy without one, so the rest of the site still works.
@@ -19,4 +20,6 @@ export function getStripe(): Stripe {
 }
 
 export const PRODUCT_NAME = "CDLPassPrep Complete Bundle";
-export const PRICE_USD_CENTS = 9900; // $99.00
+// Derived from NEXT_PUBLIC_PRICE_DISPLAY so the checkout amount always matches
+// what's shown on the page. Falls back to $99 if the env var is missing/invalid.
+export const PRICE_USD_CENTS = Math.round((parseFloat(PRICE_DISPLAY) || 99) * 100);

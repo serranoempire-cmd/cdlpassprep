@@ -34,9 +34,15 @@ export default function Hero() {
               <span className="text-green">✓</span> One-time payment
             </li>
             <li className="flex items-center gap-1.5">
-              <span className="text-green">✓</span> Lifetime access + free updates
+              <span className="text-green">✓</span> 30-day money-back guarantee
             </li>
           </ul>
+          <p className="mt-6 text-slate-300 text-sm">
+            Not sure you&apos;d pass today?{" "}
+            <a href="/quiz" className="text-amber font-semibold underline underline-offset-2">
+              Take the free 20-question practice test →
+            </a>
+          </p>
         </div>
       </div>
     </section>

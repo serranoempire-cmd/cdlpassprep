@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import CTAButton from "./CTAButton";
+import { PRICE_DISPLAY } from "@/lib/pricing";
 
 const INCLUDED = [
   "All 17 premium guides (500+ pages)",
@@ -15,7 +16,7 @@ export default function Pricing() {
     <section id="pricing" className="bg-soft py-16 md:py-24">
       <div className="mx-auto max-w-2xl px-6 text-center">
         <h2 className="font-heading font-extrabold text-navy text-3xl md:text-[40px] leading-tight">
-          Everything. One payment. $99.
+          Everything. One payment. ${PRICE_DISPLAY}.
         </h2>
 
         <div className="mt-10 rounded-2xl bg-navy p-8 md:p-10 shadow-cta border-2 border-amber/40 text-left">
@@ -25,7 +26,7 @@ export default function Pricing() {
 
           <div className="mt-4 flex items-baseline justify-center gap-3">
             <span className="text-slate-400 line-through text-xl">$297 value</span>
-            <span className="font-heading font-black text-amber text-5xl md:text-6xl">$99</span>
+            <span className="font-heading font-black text-amber text-5xl md:text-6xl">${PRICE_DISPLAY}</span>
           </div>
 
           <ul className="mt-8 space-y-3">
@@ -38,9 +39,9 @@ export default function Pricing() {
           </ul>
 
           <div className="mt-8 flex flex-col items-center gap-3">
-            <CTAButton className="w-full" fullWidthMobile={false} />
+            <CTAButton className="w-full" fullWidthMobile={false} location="pricing" />
             <p className="text-sm text-slate-400 text-center">
-              One-time payment. No subscription. All sales are final.
+              One-time payment. No subscription. 30-day money-back guarantee.
             </p>
           </div>
         </div>

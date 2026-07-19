@@ -1,3 +1,5 @@
+import { PRICE_DISPLAY } from "@/lib/pricing";
+
 const STEPS = [
   "Study the guides",
   "Drill the quiz game",
@@ -34,7 +36,7 @@ export default function Transformation() {
 
         <p className="mt-14 text-slate-300 text-lg max-w-2xl mx-auto">
           Average first-year truck driver pay in the U.S. is <span className="text-amber font-heading font-bold">$50,000+</span> —
-          your $99 investment pays for itself on day one of the job.
+          your ${PRICE_DISPLAY} investment pays for itself on day one of the job.
         </p>
       </div>
     </section>

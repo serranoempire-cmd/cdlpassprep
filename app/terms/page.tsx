@@ -35,8 +35,8 @@ export default function TermsPage() {
 
       <h2 className="font-heading font-bold text-navy text-xl">4. Refunds</h2>
       <p>
-        All sales are final. See our{" "}
-        <a href="/refunds" className="text-teal underline">Refund Policy</a> for details.
+        See our <a href="/refunds" className="text-teal underline">Refund Policy</a> for
+        the full 30-day guarantee.
       </p>
 
       <h2 className="font-heading font-bold text-navy text-xl">5. Changes to these terms</h2>

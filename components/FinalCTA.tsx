@@ -1,4 +1,5 @@
 import CTAButton from "./CTAButton";
+import { PRICE_DISPLAY } from "@/lib/pricing";
 
 export default function FinalCTA() {
   return (
@@ -12,7 +13,7 @@ export default function FinalCTA() {
           Study tonight. Test with confidence. Drive for a living.
         </p>
         <div className="mt-8 flex justify-center">
-          <CTAButton label="Get CDLPassPrep — $99" />
+          <CTAButton label={`Get CDLPassPrep — $${PRICE_DISPLAY}`} location="final-cta" />
         </div>
         <ul className="mt-6 flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 text-sm text-slate-300">
           <li className="flex items-center justify-center gap-1.5">
@@ -22,7 +23,7 @@ export default function FinalCTA() {
             <span className="text-green">✓</span> One-time payment
           </li>
           <li className="flex items-center justify-center gap-1.5">
-            <span className="text-green">✓</span> Lifetime access + free updates
+            <span className="text-green">✓</span> 30-day money-back guarantee
           </li>
         </ul>
       </div>

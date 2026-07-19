@@ -5,27 +5,24 @@ export const metadata = { title: "Refund Policy | CDLPassPrep" };
 export default function RefundsPage() {
   return (
     <LegalLayout title="Refund Policy" updated="July 19, 2026">
-      <h2 className="font-heading font-bold text-navy text-xl">All Sales Are Final</h2>
+      <h2 className="font-heading font-bold text-navy text-xl">
+        The 30-Day Pass-Prep Guarantee
+      </h2>
       <p>
-        CDLPassPrep guides and the practice quiz trainer are digital products delivered
-        instantly upon purchase. Because of this instant, irrevocable access, we do not
-        offer refunds once an order is complete.
-      </p>
-      <p>
-        Before buying, please review the guide list and What&apos;s Inside section on the
-        homepage so you know exactly what you&apos;re getting.
-      </p>
-      <p>
-        Having trouble with a download or a technical issue? Email{" "}
+        Study the guides for 30 days. If you don&apos;t feel more prepared for your CDL
+        exams — or you&apos;re unhappy for any reason — email{" "}
         <a href="mailto:Cdlpassprep@gmail.com" className="text-teal underline">
           Cdlpassprep@gmail.com
         </a>{" "}
-        and we&apos;ll help sort it out.
+        within 30 days of purchase and we&apos;ll refund every penny.
       </p>
       <p>
-        If a charge was made in error or without authorization, contact us first — we&apos;d
-        rather resolve it directly with you than through a card dispute. Refunds required by
-        applicable law will of course be honored.
+        No forms, no hassle, and you keep the downloads. We just ask that you let us know
+        what didn&apos;t work — it helps us make the guides better.
+      </p>
+      <p>
+        Refunds are issued to the original payment method and typically appear within
+        5–10 business days, depending on your bank or card issuer.
       </p>
     </LegalLayout>
   );

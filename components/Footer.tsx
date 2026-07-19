@@ -11,6 +11,9 @@ export default function Footer() {
             <span className="font-heading font-extrabold text-white text-lg">CDLPassPrep</span>
           </div>
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-300">
+            <Link href="/quiz" className="hover:text-amber">Free Practice Test</Link>
+            <Link href="/free" className="hover:text-amber">Free Cheat Sheet</Link>
+            <Link href="/guides" className="hover:text-amber">Guides</Link>
             <Link href="/terms" className="hover:text-amber">Terms</Link>
             <Link href="/privacy" className="hover:text-amber">Privacy</Link>
             <Link href="/refunds" className="hover:text-amber">Refunds</Link>

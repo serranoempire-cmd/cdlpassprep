@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
+import { PRICE_DISPLAY } from "@/lib/pricing";
 
 export default function AnnouncementBar() {
   const [visible, setVisible] = useState(true);
@@ -10,7 +11,7 @@ export default function AnnouncementBar() {
   return (
     <div className="relative bg-navy-deep text-white text-center text-sm py-2 px-10">
       <span>
-        ⚡ <strong className="font-heading font-bold">Launch price: $99</strong> — every future guide update included free.
+        ⚡ <strong className="font-heading font-bold">Launch price: ${PRICE_DISPLAY}</strong> — every future guide update included free.
       </span>
       <button
         onClick={() => setVisible(false)}

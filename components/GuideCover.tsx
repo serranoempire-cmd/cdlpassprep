@@ -10,14 +10,14 @@ type GuideCoverProps = {
 export default function GuideCover({ number, title, className = "", priority = false }: GuideCoverProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-lg shadow-card border border-amber/20 aspect-[2/3] ${className}`}
+      className={`relative overflow-hidden rounded-lg shadow-card border border-amber/20 aspect-[2/3] bg-navy-deep ${className}`}
     >
       <Image
         src={`/covers/guide-${String(number).padStart(2, "0")}.jpg`}
         alt={`${title} — CDLPassPrep guide ${number} of 17 cover`}
         fill
         sizes="(max-width: 768px) 45vw, 220px"
-        className="object-cover"
+        className="object-contain"
         priority={priority}
       />
     </div>

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "CDLPassPrep — The Complete CDL Study Guide Bundle",
     description:
       "17 premium CDL study guides + a browser-based practice quiz trainer — plain English, everything you need from your first page of studying to your first week on the job.",
-    images: ["/og-image.jpg"], // TODO: replace asset — use Guide 01 cover
+    images: ["/og-image.jpg"],
     type: "website",
   },
   twitter: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "CDLPassPrep — The Complete CDL Study Guide Bundle",
     description:
       "17 premium CDL study guides + a browser-based practice quiz trainer — plain English, everything you need to pass and get hired.",
-    images: ["/og-image.jpg"], // TODO: replace asset
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",

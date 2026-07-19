@@ -1,6 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
 
-// TODO: set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in your environment.
 // This client uses the service role key and must ONLY ever be imported from
 // server-side code (API routes / server components) — never from client components.
 export function getSupabaseAdmin() {
@@ -18,7 +17,6 @@ export function getSupabaseAdmin() {
 export const DOWNLOADS_BUCKET = "cdlpassprep-downloads";
 
 // The files buyers get access to after a verified purchase.
-// TODO: replace with the real file paths inside the Supabase bucket once uploaded.
 export const DOWNLOAD_FILES: { label: string; path: string }[] = [
   { label: "Full Bundle (All 17 Guides + Bonuses, ZIP)", path: "bundle:cdlpassprep-complete-bundle.zip" },
 ];

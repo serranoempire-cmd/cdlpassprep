@@ -1,8 +1,7 @@
 import Stripe from "stripe";
 
-// TODO: set STRIPE_SECRET_KEY in your environment. This file will throw only
-// when a checkout is actually attempted without a key — it's safe to build/deploy
-// without one, so the rest of the site (which doesn't need Stripe) still works.
+// Throws only when a checkout is actually attempted without STRIPE_SECRET_KEY set —
+// it's safe to build/deploy without one, so the rest of the site still works.
 let stripeClient: Stripe | null = null;
 
 export function getStripe(): Stripe {

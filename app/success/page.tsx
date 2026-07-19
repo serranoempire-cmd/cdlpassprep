@@ -64,7 +64,6 @@ async function VerifiedContent() {
       <div className="mt-8 space-y-3">
         {downloads === null ? (
           <div className="rounded-lg border border-amber/30 bg-amber/5 p-4 text-left text-sm text-slate-700">
-            {/* TODO: configure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY to enable real downloads */}
             Downloads aren&apos;t configured yet on this environment. Once
             <code className="mx-1 rounded bg-navy/5 px-1">SUPABASE_URL</code>
             and

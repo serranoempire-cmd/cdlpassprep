@@ -20,7 +20,7 @@ export const DOWNLOADS_BUCKET = "cdlpassprep-downloads";
 // The files buyers get access to after a verified purchase.
 // TODO: replace with the real file paths inside the Supabase bucket once uploaded.
 export const DOWNLOAD_FILES: { label: string; path: string }[] = [
-  { label: "Full Bundle (All 17 Guides + Bonuses, ZIP)", path: "bundle/cdlpassprep-complete-bundle.zip" },
+  { label: "Full Bundle (All 17 Guides + Bonuses, ZIP)", path: "bundle:cdlpassprep-complete-bundle.zip" },
 ];
 
 const SIGNED_URL_EXPIRY_SECONDS = 60 * 60 * 24; // 24h, per spec §2.1

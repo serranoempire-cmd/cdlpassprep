@@ -128,8 +128,8 @@ function UnverifiedContent({ reason }: { reason: "missing" | "unpaid" | "error" 
       <p className="mt-2 text-sm text-slate-500">
         If you just paid, check your email for a receipt with a direct link back to this
         page. If the problem continues, email{" "}
-        <a href="mailto:support@cdlpassprep.com" className="text-teal underline">
-          support@cdlpassprep.com
+        <a href="mailto:Cdlpassprep@gmail.com" className="text-teal underline">
+          Cdlpassprep@gmail.com
         </a>{" "}
         and we&apos;ll sort it out.
       </p>

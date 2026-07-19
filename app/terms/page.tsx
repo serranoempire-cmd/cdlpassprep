@@ -48,8 +48,8 @@ export default function TermsPage() {
       <h2 className="font-heading font-bold text-navy text-xl">6. Contact</h2>
       <p>
         Questions about these terms? Email{" "}
-        <a href="mailto:support@cdlpassprep.com" className="text-teal underline">
-          support@cdlpassprep.com
+        <a href="mailto:Cdlpassprep@gmail.com" className="text-teal underline">
+          Cdlpassprep@gmail.com
         </a>
         .
       </p>

@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-amber">Terms</Link>
             <Link href="/privacy" className="hover:text-amber">Privacy</Link>
             <Link href="/refunds" className="hover:text-amber">Refunds</Link>
-            <a href="mailto:support@cdlpassprep.com" className="hover:text-amber">Contact</a>
+            <a href="mailto:Cdlpassprep@gmail.com" className="hover:text-amber">Contact</a>
           </nav>
         </div>
 

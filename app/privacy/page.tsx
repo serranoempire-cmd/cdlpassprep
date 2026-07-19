@@ -37,8 +37,8 @@ export default function PrivacyPage() {
       <h2 className="font-heading font-bold text-navy text-xl">4. Your choices</h2>
       <p>
         To request deletion of your purchase records, email{" "}
-        <a href="mailto:support@cdlpassprep.com" className="text-teal underline">
-          support@cdlpassprep.com
+        <a href="mailto:Cdlpassprep@gmail.com" className="text-teal underline">
+          Cdlpassprep@gmail.com
         </a>
         .
       </p>

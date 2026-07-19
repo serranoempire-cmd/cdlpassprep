@@ -17,8 +17,8 @@ export default function RefundsPage() {
       </p>
       <p>
         Having trouble with a download or a technical issue? Email{" "}
-        <a href="mailto:support@cdlpassprep.com" className="text-teal underline">
-          support@cdlpassprep.com
+        <a href="mailto:Cdlpassprep@gmail.com" className="text-teal underline">
+          Cdlpassprep@gmail.com
         </a>{" "}
         and we&apos;ll help sort it out.
       </p>

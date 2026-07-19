@@ -29,7 +29,7 @@ STRIPE_SECRET_KEY=sk_live_or_test_...
 # app/api/checkout/route.ts to use it.
 STRIPE_PRICE_ID=price_...
 
-# Supabase — private bucket holding the guide PDFs + quiz game
+# Supabase — private bucket holding the guide PDFs
 SUPABASE_URL=https://xxxx.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=eyJ...   # service role key — server-side only, never expose to the client
 
@@ -52,7 +52,9 @@ On Vercel, add these under Project Settings → Environment Variables.
 5. Once verified, `lib/supabase.ts` generates signed, 24-hour-expiring URLs from a
    **private** Supabase Storage bucket (`cdlpassprep-downloads` by default) and the
    page renders download buttons.
-6. Stripe's built-in email receipt goes out automatically. The success page URL
+6. The success page also links to `/trainer` — a static, browser-based practice quiz
+   (see "Practice quiz trainer" below) — alongside the signed PDF download.
+7. Stripe's built-in email receipt goes out automatically. The success page URL
    (containing the session ID) is safe to reuse — Stripe session IDs remain
    retrievable, so the receipt effectively works as a "re-open my downloads" link. Set
    up a Resend-based delivery email instead/in addition if you want a nicer branded
@@ -63,9 +65,20 @@ On Vercel, add these under Project Settings → Environment Variables.
 
 1. In Supabase, create a **private** Storage bucket named `cdlpassprep-downloads` (or
    update `DOWNLOADS_BUCKET` in `lib/supabase.ts` if you name it differently).
-2. Upload the bundle ZIP(s) and update the `path` values in `DOWNLOAD_FILES` in
+2. Upload the bundle ZIP and update the `path` value in `DOWNLOAD_FILES` in
    `lib/supabase.ts` to match.
 3. Never make the bucket public — signed URLs are how buyers get access.
+
+## Practice quiz trainer
+
+`public/trainer/` is a static build of a separate Vite + React app (originally an
+Electron desktop app; the same source builds as a plain web app with no changes). It's
+served directly at `/trainer` via a rewrite in `next.config.mjs`, and linked from the
+success page. It is **not** access-gated — the URL isn't published anywhere except the
+success page, but anyone with the link can reach it. That's an intentional tradeoff for
+simplicity; add real gating (e.g. checking a purchase token) if that's not good enough.
+To ship an updated question set, rebuild the trainer source and copy its `dist/*`
+contents into `public/trainer/` again — no need to redistribute anything to past buyers.
 
 ## Assets
 
@@ -84,7 +97,6 @@ Still marked `/* TODO: replace asset */` in code, since no source material exist
 - Inside-page screenshots (4) → `components/ShowDontTell.tsx` (needs real PDF page
   renders, e.g. a stopping-distance infographic, a spoken-script card, an air-brake
   PSI chart, a cheat sheet)
-- Quiz game screenshot → `components/WhatsInside.tsx` quiz-game callout band
 
 ## Analytics / pixels
 

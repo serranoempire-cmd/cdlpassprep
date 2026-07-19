@@ -96,8 +96,8 @@ export default function WhatsInside() {
             <div className="flex-1 text-center md:text-left">
               <p className="font-heading font-extrabold text-amber uppercase tracking-wide text-sm">Plus</p>
               <p className="mt-2 font-heading font-bold text-white text-xl md:text-2xl leading-snug">
-                The Offline Practice Quiz Game — 300 exam-style questions, works without
-                internet, drills you until the answers are automatic.
+                The Practice Quiz Trainer — 300 exam-style questions, right in your
+                browser, drills you until the answers are automatic.
               </p>
             </div>
           </div>

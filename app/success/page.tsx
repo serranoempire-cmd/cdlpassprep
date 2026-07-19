@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, Download, AlertTriangle } from "lucide-react";
+import { CheckCircle2, Download, AlertTriangle, Gamepad2 } from "lucide-react";
 import { getStripe } from "@/lib/stripe";
 import { createSignedDownloadUrls } from "@/lib/supabase";
 import CPBadge from "@/components/CPBadge";
@@ -91,6 +91,21 @@ async function VerifiedContent() {
       <p className="mt-6 text-xs text-slate-400">
         Download links expire after 24 hours for security — revisit this page any time
         via the link in your receipt email to generate fresh ones.
+      </p>
+
+      <a
+        href="/trainer"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 flex items-center justify-between gap-3 rounded-lg border border-navy/10 p-4 text-left transition hover:border-amber hover:bg-amber/5"
+      >
+        <span className="font-heading font-bold text-navy">
+          Launch the Offline Practice Quiz Trainer
+        </span>
+        <Gamepad2 className="text-amber shrink-0" size={20} />
+      </a>
+      <p className="mt-2 text-xs text-slate-400">
+        Opens in your browser — bookmark it for offline-style practice anytime.
       </p>
     </div>
   );

@@ -17,10 +17,9 @@ const SCREENSHOTS = [
     alt: "Air Brakes guide page showing governor cut-out/cut-in, low-air warning, and spring-brake apply PSI numbers",
   },
   {
-    // TODO: replace asset — Guide 1 (General Knowledge), page 47, "Quick-Reference Cheat Sheet"
     caption: "One-page cheat sheet",
-    src: null,
-    alt: "",
+    src: "/inside-cheat-sheet.jpg",
+    alt: "General Knowledge guide quick-reference cheat sheet covering stopping distance, ABS, following distance, and more",
   },
 ];
 

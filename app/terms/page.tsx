@@ -4,7 +4,7 @@ export const metadata = { title: "Terms of Service | CDLPassPrep" };
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" updated="July 18, 2026">
+    <LegalLayout title="Terms of Service" updated="July 19, 2026">
       <p>
         These terms govern your purchase and use of CDLPassPrep (&ldquo;the product&rdquo;),
         a digital bundle of study guides and a practice quiz game sold by CDLPassPrep
@@ -35,8 +35,8 @@ export default function TermsPage() {
 
       <h2 className="font-heading font-bold text-navy text-xl">4. Refunds</h2>
       <p>
-        See our <a href="/refunds" className="text-teal underline">Refund Policy</a> for
-        the full 30-day guarantee.
+        All sales are final. See our{" "}
+        <a href="/refunds" className="text-teal underline">Refund Policy</a> for details.
       </p>
 
       <h2 className="font-heading font-bold text-navy text-xl">5. Changes to these terms</h2>

@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Does the quiz game need internet?",
-    a: "No — it works fully offline once downloaded.",
+    a: "It runs right in your browser — you'll need a connection to load it initially, then it's yours to keep coming back to.",
   },
   {
     q: "Is this the actual DMV test questions?",
@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "What if I fail anyway?",
-    a: "You're covered by the 30-day refund. Guide 15 (Common Test Failures) also exists specifically to help you prep for a retake.",
+    a: "Guide 15 (Common Test Failures) exists specifically to help you prep for a retake — it breaks down exactly why people fail and how to fix it before you go back.",
   },
   {
     q: "One payment or subscription?",

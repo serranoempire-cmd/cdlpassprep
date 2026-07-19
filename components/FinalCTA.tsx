@@ -22,7 +22,7 @@ export default function FinalCTA() {
             <span className="text-green">✓</span> One-time payment
           </li>
           <li className="flex items-center justify-center gap-1.5">
-            <span className="text-green">✓</span> 30-day money-back guarantee
+            <span className="text-green">✓</span> Lifetime access + free updates
           </li>
         </ul>
       </div>

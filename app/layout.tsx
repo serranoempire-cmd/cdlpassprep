@@ -19,12 +19,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CDLPassPrep — The Complete CDL Study Guide Bundle | Pass Your CDL Test",
   description:
-    "17 premium CDL study guides + an offline practice quiz game. Plain-English prep for the General Knowledge, Air Brakes, Combination, Hazmat, and Road tests. Instant download, one-time $99 payment, 30-day guarantee.",
+    "17 premium CDL study guides + a browser-based practice quiz trainer. Plain-English prep for the General Knowledge, Air Brakes, Combination, Hazmat, and Road tests. Instant download, one-time $99 payment.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cdlpassprep.com"),
   openGraph: {
     title: "CDLPassPrep — The Complete CDL Study Guide Bundle",
     description:
-      "17 premium CDL study guides + an offline practice quiz game — plain English, everything you need from your first page of studying to your first week on the job.",
+      "17 premium CDL study guides + a browser-based practice quiz trainer — plain English, everything you need from your first page of studying to your first week on the job.",
     images: ["/og-image.jpg"], // TODO: replace asset — use Guide 01 cover
     type: "website",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CDLPassPrep — The Complete CDL Study Guide Bundle",
     description:
-      "17 premium CDL study guides + an offline practice quiz game — plain English, everything you need to pass and get hired.",
+      "17 premium CDL study guides + a browser-based practice quiz trainer — plain English, everything you need to pass and get hired.",
     images: ["/og-image.jpg"], // TODO: replace asset
   },
   icons: {

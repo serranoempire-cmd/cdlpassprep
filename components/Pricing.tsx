@@ -40,7 +40,7 @@ export default function Pricing() {
           <div className="mt-8 flex flex-col items-center gap-3">
             <CTAButton className="w-full" fullWidthMobile={false} />
             <p className="text-sm text-slate-400 text-center">
-              One-time payment. No subscription. 30-day money-back guarantee.
+              One-time payment. No subscription. All sales are final.
             </p>
           </div>
         </div>

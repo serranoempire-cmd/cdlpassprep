@@ -1,8 +1,27 @@
+import Image from "next/image";
+
 const SCREENSHOTS = [
-  "Stopping-distance infographic",
-  "Spoken-script dark cards",
-  "Air-brake PSI chart",
-  "One-page cheat sheet",
+  {
+    caption: "Stopping-distance infographic",
+    src: "/inside-stopping-distance.jpg",
+    alt: "General Knowledge guide page showing a stopping distance bar chart at 30, 55, and 65 mph",
+  },
+  {
+    caption: "Spoken-script dark cards",
+    src: "/inside-spoken-script.jpg",
+    alt: "Pre-Trip Inspection guide page showing the word-for-word spoken script for the engine compartment check",
+  },
+  {
+    caption: "Air-brake PSI chart",
+    src: "/inside-airbrake-psi.jpg",
+    alt: "Air Brakes guide page showing governor cut-out/cut-in, low-air warning, and spring-brake apply PSI numbers",
+  },
+  {
+    // TODO: replace asset — Guide 1 (General Knowledge), page 47, "Quick-Reference Cheat Sheet"
+    caption: "One-page cheat sheet",
+    src: null,
+    alt: "",
+  },
 ];
 
 export default function ShowDontTell() {
@@ -16,13 +35,29 @@ export default function ShowDontTell() {
         </div>
 
         <div className="mt-12 flex gap-5 overflow-x-auto md:grid md:grid-cols-4 md:overflow-visible pb-4 -mx-6 px-6 md:mx-0 md:px-0">
-          {SCREENSHOTS.map((caption) => (
+          {SCREENSHOTS.map(({ caption, src, alt }) => (
             <div
               key={caption}
-              className="shrink-0 w-[75%] sm:w-[45%] md:w-auto aspect-[4/5] rounded-xl bg-navy-deep border border-amber/20 flex items-end p-4"
+              className="relative shrink-0 w-[75%] sm:w-[45%] md:w-auto aspect-[4/5] rounded-xl overflow-hidden bg-navy-deep border border-amber/20"
             >
-              {/* TODO: replace asset — render from the actual PDF page */}
-              <span className="text-slate-300 text-sm">{caption}</span>
+              {src ? (
+                <>
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    sizes="(max-width: 768px) 75vw, 25vw"
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-transparent p-4 pt-10">
+                    <span className="text-slate-100 text-sm font-semibold">{caption}</span>
+                  </div>
+                </>
+              ) : (
+                <div className="h-full flex items-end p-4">
+                  <span className="text-slate-300 text-sm">{caption}</span>
+                </div>
+              )}
             </div>
           ))}
         </div>

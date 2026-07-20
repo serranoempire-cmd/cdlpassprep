@@ -4,7 +4,11 @@ import { testimonials } from "@/data/testimonials";
 export default function SocialProof() {
   return (
     <section className="bg-navy py-16 md:py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center">
+      <div
+        className={`mx-auto px-6 text-center ${
+          testimonials.length === 0 ? "max-w-3xl" : "max-w-6xl"
+        }`}
+      >
         <h2 className="font-heading font-extrabold text-white text-3xl md:text-[40px] leading-tight">
           Drivers are passing with this.
         </h2>

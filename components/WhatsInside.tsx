@@ -63,9 +63,12 @@ export default function WhatsInside() {
         {GROUPS.map((group) => (
           <div key={group.heading} className="mt-14">
             <h3 className="font-heading font-bold text-navy text-xl mb-6">{group.heading}</h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6">
               {group.guides.map((guide) => (
-                <div key={guide.number} className="bg-white rounded-xl shadow-card overflow-hidden">
+                <div
+                  key={guide.number}
+                  className="shrink-0 snap-start w-[70%] sm:w-[240px] bg-white rounded-xl shadow-card overflow-hidden"
+                >
                   <div className="p-3">
                     <GuideCover number={guide.number} title={guide.title} />
                   </div>

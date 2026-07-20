@@ -4,8 +4,7 @@ import crypto from "crypto";
 const FROM = process.env.EMAIL_FROM || "CDLPassPrep <hello@cdlpassprep.com>";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cdlpassprep.com";
 
-// TODO (owner): replace with your real mailing address — required for CAN-SPAM compliance.
-const MAILING_ADDRESS = "CDLPassPrep, [Add your business mailing address here]";
+const MAILING_ADDRESS = "CDLPassPrep, 23 W Lagrande St, Avon Park, FL 33825";
 
 function getResendClient(): Resend | null {
   if (!process.env.RESEND_API_KEY) return null;

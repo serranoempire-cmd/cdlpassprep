@@ -29,11 +29,11 @@ export default function SocialProof() {
             </p>
           </div>
         ) : (
-          <div className="mt-12 grid gap-6 sm:grid-cols-1 md:grid-cols-3 text-left">
+          <div className="mt-12 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 text-left">
             {testimonials.map((t) => (
               <div
                 key={t.name + t.text.slice(0, 10)}
-                className="bg-navy-deep rounded-2xl p-6 border border-amber/20"
+                className="shrink-0 snap-start w-[80%] sm:w-[320px] bg-navy-deep rounded-2xl p-6 border border-amber/20"
               >
                 <Quote className="text-amber" size={24} />
                 <p className="mt-3 text-slate-300 text-sm leading-relaxed">{t.text}</p>

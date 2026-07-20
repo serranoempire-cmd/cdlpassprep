@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Download } from "lucide-react";
 import { track } from "@/lib/track";
 
-export default function CheatSheetForm() {
+export default function CheatSheetForm({ align = "center" }: { align?: "center" | "left" }) {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -48,7 +48,10 @@ export default function CheatSheetForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-sm mx-auto">
+    <form
+      onSubmit={handleSubmit}
+      className={`w-full max-w-sm ${align === "center" ? "mx-auto" : ""}`}
+    >
       <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"

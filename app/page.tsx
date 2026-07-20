@@ -5,6 +5,7 @@ import Transformation from "@/components/Transformation";
 import WhatsInside from "@/components/WhatsInside";
 import ShowDontTell from "@/components/ShowDontTell";
 import WhyItWorks from "@/components/WhyItWorks";
+import FreeCheatSheetPromo from "@/components/FreeCheatSheetPromo";
 import SocialProof from "@/components/SocialProof";
 import Pricing from "@/components/Pricing";
 import Guarantee from "@/components/Guarantee";
@@ -24,6 +25,7 @@ export default function Home() {
       <WhatsInside />
       <ShowDontTell />
       <WhyItWorks />
+      <FreeCheatSheetPromo />
       <SocialProof />
       <Pricing />
       <Guarantee />
